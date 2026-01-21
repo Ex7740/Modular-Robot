@@ -4,13 +4,12 @@ import math
 # ---------------- CONFIG ----------------
 Screen_height = 600
 Screen_width = 1000
-# Swap width and height for 90-degree rotation
 Main_Body_width = 320
 Main_Body_height = 180
 ATTACH_DISTANCE = 25
 
 ATTACH_OFFSETS = {
-    "top_left": (90, 0),     # x, y offsets
+    "top_left": (90, 0),     
     "top_right": (-90, 0),
     "bottom_left": (90, 0),
     "bottom_right": (-90, 0),
@@ -70,7 +69,6 @@ class Addon:
         self.offset_y = 0
 
     def handle_event(self, event):
-        # Block interaction through menu
         if menu_open and event.type == pygame.MOUSEBUTTONDOWN and event.pos[1] <= MENU_HEIGHT:
             return
 
@@ -91,23 +89,19 @@ class Addon:
 
     def update(self, main_body):
         if not self.attached and not self.dragging:
-            # -------- 4-LEG ATTACHMENT POINTS FOR ROTATED BODY --------
-            # How much the addon is offset from each corner
-      
-            
             points = {
                 "top_left": (main_body.left - self.rect.width + ATTACH_OFFSETS["top_left"][0],
                             main_body.top - self.rect.height + ATTACH_OFFSETS["top_left"][1]),
                 "top_right": (main_body.right + ATTACH_OFFSETS["top_right"][0],
-                            main_body.top - self.rect.height + ATTACH_OFFSETS["top_right"][1]),
+                             main_body.top - self.rect.height + ATTACH_OFFSETS["top_right"][1]),
                 "bottom_left": (main_body.left - self.rect.width + ATTACH_OFFSETS["bottom_left"][0],
                                 main_body.bottom + ATTACH_OFFSETS["bottom_left"][1]),
                 "bottom_right": (main_body.right + ATTACH_OFFSETS["bottom_right"][0],
-                                main_body.bottom + ATTACH_OFFSETS["bottom_right"][1]),
+                                 main_body.bottom + ATTACH_OFFSETS["bottom_right"][1]),
                 "left_center": (main_body.left - self.rect.width + ATTACH_OFFSETS["left_center"][0],
-                    main_body.centery - self.rect.height // 2 + ATTACH_OFFSETS["left_center"][1]),
+                                main_body.centery - self.rect.height // 2 + ATTACH_OFFSETS["left_center"][1]),
                 "right_center": (main_body.right + ATTACH_OFFSETS["right_center"][0],
-                     main_body.centery - self.rect.height // 2 + ATTACH_OFFSETS["right_center"][1]),
+                                 main_body.centery - self.rect.height // 2 + ATTACH_OFFSETS["right_center"][1]),
             }
             closest_side = None
             closest_dist = float("inf")
@@ -138,9 +132,7 @@ class Addon:
             elif self.attached_side == "right_center":
                 self.rect.topleft = (main_body.right + ox, main_body.centery - self.rect.height // 2 + oy)
 
-
-
-        # -------- EDGE DETECTION --------
+        # Edge detection
         self.rect.x = max(0, min(self.rect.x, Screen_width - self.rect.width))
         self.rect.y = max(0, min(self.rect.y, Screen_height - self.rect.height))
 
@@ -174,12 +166,11 @@ while running:
         elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
             if menu_open and event.pos[1] <= MENU_HEIGHT:
                 if add_button.collidepoint(event.pos):
-                    addons.append(
-                        Addon(
-                            10,
-                            MENU_HEIGHT + 10 + addon_spawn_index * 20
-                        )
-                    )
+                    # Spawn addons in a grid to avoid overlap
+                    spawn_x = 10 + (addon_spawn_index % 5) * 90  # X offset
+                    spawn_y = MENU_HEIGHT + 10 + (addon_spawn_index // 5) * 90  # Y offset
+
+                    addons.append(Addon(spawn_x, spawn_y))
                     addon_spawn_index += 1
                 elif delete_button.collidepoint(event.pos) and addons:
                     addons.pop()
