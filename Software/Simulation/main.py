@@ -14,6 +14,8 @@ ATTACH_OFFSETS = {
     "top_right": (-90, 0),
     "bottom_left": (90, 0),
     "bottom_right": (-90, 0),
+    "left_center": (0, 0),
+    "right_center": (0, 0),
 }
 
 
@@ -104,6 +106,10 @@ class Addon:
                                 main_body.bottom + ATTACH_OFFSETS["bottom_left"][1]),
                 "bottom_right": (main_body.right + ATTACH_OFFSETS["bottom_right"][0],
                                 main_body.bottom + ATTACH_OFFSETS["bottom_right"][1]),
+                "left_center": (main_body.left - self.rect.width + ATTACH_OFFSETS["left_center"][0],
+                    main_body.centery - self.rect.height // 2 + ATTACH_OFFSETS["left_center"][1]),
+                "right_center": (main_body.right + ATTACH_OFFSETS["right_center"][0],
+                     main_body.centery - self.rect.height // 2 + ATTACH_OFFSETS["right_center"][1]),
             }
             closest_side = None
             closest_dist = float("inf")
@@ -129,6 +135,10 @@ class Addon:
                 self.rect.topleft = (main_body.left - self.rect.width + ox, main_body.bottom + oy)
             elif self.attached_side == "bottom_right":
                 self.rect.topleft = (main_body.right + ox, main_body.bottom + oy)
+            elif self.attached_side == "left_center":
+                self.rect.topleft = (main_body.left - self.rect.width + ox, main_body.centery - self.rect.height // 2 + oy)
+            elif self.attached_side == "right_center":
+                self.rect.topleft = (main_body.right + ox, main_body.centery - self.rect.height // 2 + oy)
 
 
 
