@@ -18,8 +18,6 @@ ATTACH_OFFSETS = {
     "right_center": (0, 0),
 }
 
-
-
 # Menu
 MENU_HEIGHT = 40
 MENU_BG = (50, 50, 50)
@@ -40,7 +38,7 @@ Main_Body = pygame.Rect(
     Main_Body_width,
     Main_Body_height
 )
-main_color = (112, 108, 97)
+main_color = (111, 100, 100)
 
 # ---------------- MENU ----------------
 menu_open = False
