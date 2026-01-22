@@ -1,0 +1,279 @@
+(pcb freerouting.dsn
+  (parser
+    (string_quote ")
+    (space_in_quoted_tokens on)
+    (host_cad "KiCad's Pcbnew")
+    (host_version "9.0.6")
+  )
+  (resolution um 10)
+  (unit um)
+  (structure
+    (layer F.Cu
+      (type signal)
+      (property
+        (index 0)
+      )
+    )
+    (layer B.Cu
+      (type signal)
+      (property
+        (index 1)
+      )
+    )
+    (boundary
+      (path pcb 0  154275 -111698  106225 -111698  106225 -68475  154275 -68475
+            154275 -111698)
+    )
+    (via "Via[0-1]_600:300_um")
+    (rule
+      (width 200)
+      (clearance 200)
+      (clearance 50 (type smd_smd))
+    )
+  )
+  (placement
+    (component "RF_Module:ESP32-S3-WROOM-1"
+      (place U1 130250.000000 -96250.000000 front 0.000000 (PN "ESP32-S3-WROOM-1"))
+    )
+  )
+  (library
+    (image "RF_Module:ESP32-S3-WROOM-1"
+      (outline (path signal 120  -9200 12900  -9200 6700))
+      (outline (path signal 120  -9200 12900  9200 12900))
+      (outline (path signal 120  -9200 -11950  -9200 -12950))
+      (outline (path signal 120  -9200 -12950  -7700 -12950))
+      (outline (path signal 120  9200 12900  9200 6700))
+      (outline (path signal 120  9200 -12950  7700 -12950))
+      (outline (path signal 120  9200 -12950  9200 -11950))
+      (outline (path signal 50  -24000 27750  -24000 6750))
+      (outline (path signal 50  -24000 6750  -9750 6750))
+      (outline (path signal 50  -9750 -13450  -9750 6750))
+      (outline (path signal 50  -9750 -13450  9750 -13450))
+      (outline (path signal 50  9750 6750  9750 -13450))
+      (outline (path signal 50  9750 6750  24000 6750))
+      (outline (path signal 50  24000 27750  -24000 27750))
+      (outline (path signal 50  24000 6750  24000 27750))
+      (outline (path signal 100  -9000 12750  9000 12750))
+      (outline (path signal 100  -9000 6750  9000 6750))
+      (outline (path signal 100  -9000 -12750  -9000 12750))
+      (outline (path signal 100  -9000 -12750  9000 -12750))
+      (outline (path signal 100  9000 -12750  9000 12750))
+      (pin Rect[T]Pad_1500.000000x900.000000_um 1 -8750 5260)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 2 -8750 3990)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 3 -8750 2720)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 4 -8750 1450)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 5 -8750 180)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 6 -8750 -1090)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 7 -8750 -2360)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 8 -8750 -3630)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 9 -8750 -4900)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 10 -8750 -6170)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 11 -8750 -7440)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 12 -8750 -8710)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 13 -8750 -9980)
+      (pin Rect[T]Pad_1500.000000x900.000000_um (rotate 180) 14 -8750 -11250)
+      (pin Rect[T]Pad_1500.000000x900.000000_um (rotate 270) 15 -6985 -12500)
+      (pin Rect[T]Pad_1500.000000x900.000000_um (rotate 270) 16 -5715 -12500)
+      (pin Rect[T]Pad_1500.000000x900.000000_um (rotate 270) 17 -4445 -12500)
+      (pin Rect[T]Pad_1500.000000x900.000000_um (rotate 270) 18 -3175 -12500)
+      (pin Rect[T]Pad_1500.000000x900.000000_um (rotate 270) 19 -1905 -12500)
+      (pin Rect[T]Pad_1500.000000x900.000000_um (rotate 270) 20 -635 -12500)
+      (pin Rect[T]Pad_1500.000000x900.000000_um (rotate 270) 21 635 -12500)
+      (pin Rect[T]Pad_1500.000000x900.000000_um (rotate 270) 22 1905 -12500)
+      (pin Rect[T]Pad_1500.000000x900.000000_um (rotate 270) 23 3175 -12500)
+      (pin Rect[T]Pad_1500.000000x900.000000_um (rotate 270) 24 4445 -12500)
+      (pin Rect[T]Pad_1500.000000x900.000000_um (rotate 270) 25 5715 -12500)
+      (pin Rect[T]Pad_1500.000000x900.000000_um (rotate 270) 26 6985 -12500)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 27 8750 -11250)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 28 8750 -9980)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 29 8750 -8710)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 30 8750 -7440)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 31 8750 -6170)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 32 8750 -4900)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 33 8750 -3630)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 34 8750 -2360)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 35 8750 -1090)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 36 8750 180)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 37 8750 1450)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 38 8750 2720)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 39 8750 3990)
+      (pin Rect[T]Pad_1500.000000x900.000000_um 40 8750 5260)
+      (pin Round[A]Pad_600.000000_um (rotate 90) 41 -2900 -1760)
+      (pin Round[A]Pad_600.000000_um 41@1 -2900 -3160)
+      (pin Round[A]Pad_600.000000_um 41@2 -2200 -1060)
+      (pin Round[A]Pad_600.000000_um 41@3 -2200 -2460)
+      (pin Round[A]Pad_600.000000_um 41@4 -2200 -3860)
+      (pin Round[A]Pad_600.000000_um 41@5 -1500 -1760)
+      (pin Rect[T]Pad_3900.000000x3900.000000_um (rotate 270) 41@6 -1500 -2460)
+      (pin Round[A]Pad_600.000000_um 41@7 -1500 -3160)
+      (pin Round[A]Pad_600.000000_um 41@8 -800 -1060)
+      (pin Round[A]Pad_600.000000_um 41@9 -800 -2460)
+      (pin Round[A]Pad_600.000000_um 41@10 -800 -3860)
+      (pin Round[A]Pad_600.000000_um 41@11 -100 -1760)
+      (pin Round[A]Pad_600.000000_um 41@12 -100 -3160)
+      (keepout "" (polygon F.Cu 0  -24000 6750  24000 6750  24000 27750  -24000 27750  -24000 6750))
+      (keepout "" (polygon B.Cu 0  -24000 6750  24000 6750  24000 27750  -24000 27750  -24000 6750))
+    )
+    (padstack Round[A]Pad_600.000000_um
+      (shape (circle F.Cu 600))
+      (shape (circle B.Cu 600))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_3900.000000x3900.000000_um
+      (shape (rect F.Cu -1950 -1950 1950 1950))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1500.000000x900.000000_um
+      (shape (rect F.Cu -750 -450 750 450))
+      (attach off)
+    )
+    (padstack "Via[0-1]_600:300_um"
+      (shape (circle F.Cu 600))
+      (shape (circle B.Cu 600))
+      (attach off)
+    )
+  )
+  (network
+    (net "unconnected-(U1-IO8-Pad12)"
+      (pins U1-12)
+    )
+    (net "unconnected-(U1-IO38-Pad31)"
+      (pins U1-31)
+    )
+    (net "Net-(U1-GND-Pad1)"
+      (pins U1-1 U1-40 U1-41 U1-41@1 U1-41@2 U1-41@3 U1-41@4 U1-41@5 U1-41@6 U1-41@7
+        U1-41@8 U1-41@9 U1-41@10 U1-41@11 U1-41@12)
+    )
+    (net "unconnected-(U1-IO42-Pad35)"
+      (pins U1-35)
+    )
+    (net "unconnected-(U1-IO4-Pad4)"
+      (pins U1-4)
+    )
+    (net "unconnected-(U1-IO18-Pad11)"
+      (pins U1-11)
+    )
+    (net "unconnected-(U1-IO39-Pad32)"
+      (pins U1-32)
+    )
+    (net "unconnected-(U1-TXD0-Pad37)"
+      (pins U1-37)
+    )
+    (net "unconnected-(U1-IO5-Pad5)"
+      (pins U1-5)
+    )
+    (net "unconnected-(U1-IO14-Pad22)"
+      (pins U1-22)
+    )
+    (net "unconnected-(U1-IO6-Pad6)"
+      (pins U1-6)
+    )
+    (net "unconnected-(U1-IO48-Pad25)"
+      (pins U1-25)
+    )
+    (net "unconnected-(U1-IO16-Pad9)"
+      (pins U1-9)
+    )
+    (net "unconnected-(U1-USB_D+-Pad14)"
+      (pins U1-14)
+    )
+    (net "unconnected-(U1-IO2-Pad38)"
+      (pins U1-38)
+    )
+    (net "unconnected-(U1-IO35-Pad28)"
+      (pins U1-28)
+    )
+    (net "unconnected-(U1-IO40-Pad33)"
+      (pins U1-33)
+    )
+    (net "unconnected-(U1-IO1-Pad39)"
+      (pins U1-39)
+    )
+    (net "unconnected-(U1-IO41-Pad34)"
+      (pins U1-34)
+    )
+    (net "unconnected-(U1-IO45-Pad26)"
+      (pins U1-26)
+    )
+    (net "unconnected-(U1-IO15-Pad8)"
+      (pins U1-8)
+    )
+    (net "unconnected-(U1-IO0-Pad27)"
+      (pins U1-27)
+    )
+    (net "unconnected-(U1-IO11-Pad19)"
+      (pins U1-19)
+    )
+    (net "unconnected-(U1-IO37-Pad30)"
+      (pins U1-30)
+    )
+    (net "unconnected-(U1-IO9-Pad17)"
+      (pins U1-17)
+    )
+    (net "unconnected-(U1-USB_D--Pad13)"
+      (pins U1-13)
+    )
+    (net "unconnected-(U1-IO46-Pad16)"
+      (pins U1-16)
+    )
+    (net "unconnected-(U1-IO13-Pad21)"
+      (pins U1-21)
+    )
+    (net "unconnected-(U1-IO7-Pad7)"
+      (pins U1-7)
+    )
+    (net "unconnected-(U1-RXD0-Pad36)"
+      (pins U1-36)
+    )
+    (net "unconnected-(U1-IO36-Pad29)"
+      (pins U1-29)
+    )
+    (net "unconnected-(U1-IO17-Pad10)"
+      (pins U1-10)
+    )
+    (net "unconnected-(U1-3V3-Pad2)"
+      (pins U1-2)
+    )
+    (net "unconnected-(U1-IO47-Pad24)"
+      (pins U1-24)
+    )
+    (net "unconnected-(U1-IO12-Pad20)"
+      (pins U1-20)
+    )
+    (net "unconnected-(U1-EN-Pad3)"
+      (pins U1-3)
+    )
+    (net "unconnected-(U1-IO21-Pad23)"
+      (pins U1-23)
+    )
+    (net "unconnected-(U1-IO3-Pad15)"
+      (pins U1-15)
+    )
+    (net "unconnected-(U1-IO10-Pad18)"
+      (pins U1-18)
+    )
+    (class kicad_default "Net-(U1-GND-Pad1)" "unconnected-(U1-3V3-Pad2)" "unconnected-(U1-EN-Pad3)"
+      "unconnected-(U1-IO0-Pad27)" "unconnected-(U1-IO1-Pad39)" "unconnected-(U1-IO10-Pad18)"
+      "unconnected-(U1-IO11-Pad19)" "unconnected-(U1-IO12-Pad20)" "unconnected-(U1-IO13-Pad21)"
+      "unconnected-(U1-IO14-Pad22)" "unconnected-(U1-IO15-Pad8)" "unconnected-(U1-IO16-Pad9)"
+      "unconnected-(U1-IO17-Pad10)" "unconnected-(U1-IO18-Pad11)" "unconnected-(U1-IO2-Pad38)"
+      "unconnected-(U1-IO21-Pad23)" "unconnected-(U1-IO3-Pad15)" "unconnected-(U1-IO35-Pad28)"
+      "unconnected-(U1-IO36-Pad29)" "unconnected-(U1-IO37-Pad30)" "unconnected-(U1-IO38-Pad31)"
+      "unconnected-(U1-IO39-Pad32)" "unconnected-(U1-IO4-Pad4)" "unconnected-(U1-IO40-Pad33)"
+      "unconnected-(U1-IO41-Pad34)" "unconnected-(U1-IO42-Pad35)" "unconnected-(U1-IO45-Pad26)"
+      "unconnected-(U1-IO46-Pad16)" "unconnected-(U1-IO47-Pad24)" "unconnected-(U1-IO48-Pad25)"
+      "unconnected-(U1-IO5-Pad5)" "unconnected-(U1-IO6-Pad6)" "unconnected-(U1-IO7-Pad7)"
+      "unconnected-(U1-IO8-Pad12)" "unconnected-(U1-IO9-Pad17)" "unconnected-(U1-RXD0-Pad36)"
+      "unconnected-(U1-TXD0-Pad37)" "unconnected-(U1-USB_D+-Pad14)" "unconnected-(U1-USB_D--Pad13)"
+      (circuit
+        (use_via "Via[0-1]_600:300_um")
+      )
+      (rule
+        (width 200)
+        (clearance 200)
+      )
+    )
+  )
+  (wiring
+  )
+)
