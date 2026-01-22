@@ -142,7 +142,7 @@ class Addon:
 # ---------------- CREATE ADDONS ----------------
 addons = [
     Addon(10, MENU_HEIGHT + 10),
-    Addon(10, MENU_HEIGHT + 30),
+    Addon(10, MENU_HEIGHT + 100),
 ]
 addon_spawn_index = len(addons)
 
